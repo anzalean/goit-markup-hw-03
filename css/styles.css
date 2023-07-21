@@ -1,4 +1,8 @@
-/* -------------BODY------------- */
+/**
+  |============================
+  | Variables
+  |============================
+*/
 :root {
   --primary-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
@@ -8,8 +12,15 @@
   --button-color: #4d5ae5;
   --active-link-color: #404bbf;
   --primary-background-color: #fff;
+  --cornflower: #e7e9fc;
 }
 
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+/* reset start */
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
@@ -20,14 +31,73 @@ body {
   letter-spacing: 0.32px;
 }
 
-.text {
-  color: var(--primary-text-color);
-}
-
-/* LIST */
 .list {
   list-style-type: none;
-  list-style: none;
+}
+
+.link {
+  font-family: inherit;
+  text-decoration-line: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: o;
+  margin-bottom: 0;
+}
+/* reset end */
+/**
+  |============================
+  | Components styles
+  |============================
+*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  display: flex;
+}
+.text {
+  color: var(--primary-text-color);
 }
 
 /* TITLE */
@@ -79,12 +149,10 @@ body {
 
 /* LINK */
 .link {
-  font-family: inherit;
   color: var(--accent-text-color);
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02tm;
-  text-decoration-line: none;
+  letter-spacing: 0.02em;
 }
 
 a:focus,
@@ -107,12 +175,10 @@ a:hover {
 .order-button {
   background: var(--button-color);
   color: var(--primary-background-color);
-  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.64px;
-  cursor: pointer;
 }
 
 .order-button:focus,
@@ -124,12 +190,10 @@ a:hover {
   background: var(--accent-background-color);
   color: var(--button-color);
   text-align: center;
-  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em; /* 150% */
   letter-spacing: 0.64px;
-  cursor: pointer;
 }
 
 .filter-button:hover,
@@ -139,6 +203,9 @@ a:hover {
 }
 
 /* -------------HEADER------------- */
+.top-line {
+  border-bottom: 1px solid var(--cornflower);
+}
 /* LOGO */
 
 .logo-header-studio {
@@ -160,7 +227,7 @@ a:hover {
 
 /* -------------FOOTER------------- */
 .footer {
-  background-color: var(--accent-text-color, #2e2f42);
+  background-color: var(--accent-text-color);
   color: var(--accent-background-color);
 }
 
